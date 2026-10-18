@@ -2,12 +2,12 @@
 
 [![H3 Recast demo: one clip, seven casts](assets/poster.jpg)](assets/h3_recast_demo.mp4)
 
-*Click the image for the 20 s demo (1080p). Every person in it is AI-generated.*
+*Click the image for the 19 s demo (1080p). Every person in it is AI-generated.*
 
 Joint character swap on MiniMax H3 + the BFS Character Swap LoRA, with optional lip repair.
 Swap up to three people in a clip in one pass. The motion, the set and the clip's own audio stay.
 
-**Try it first:** copy the three files from `example_inputs/` into `ComfyUI/input/` and press Run. It is pre-set to the Distracted Boyfriend demo: all three people become retirees.
+**Try it first:** copy the files from `example_inputs/` into `ComfyUI/input/` and press Run. It is pre-set to the Distracted Boyfriend demo: all three people become retirees.
 
 **Hard rules**
 - **Number of people = everyone in the shot** (1-3), not only the ones you change. A person left out of the count gets re-dressed.
@@ -43,7 +43,7 @@ Swap up to three people in a clip in one pass. The motion, the set and the clip'
 ## Files
 - `assets/`: the demo video and its poster frame.
 - `H3_Recast.json`: the workflow (opens in App mode; switch to Graph for the nodes).
-- `example_inputs/`: the Distracted Boyfriend example (guide clip, retirees scene reference, person 3 face for lip repair). Copy into `ComfyUI/input/`.
+- `example_inputs/`: the Distracted Boyfriend example (guide clip, retirees scene reference, person 2 and 3 faces for lip repair). Copy into `ComfyUI/input/`.
 
 ## Credits
 - [MiniMax H3](https://huggingface.co/Comfy-Org/MiniMax-H3) (Comfy-Org repack) and ComfyUI core nodes.

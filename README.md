@@ -1,4 +1,9 @@
 # H3 Recast
+
+[![H3 Recast demo: one clip, seven casts](assets/poster.jpg)](assets/h3_recast_demo.mp4)
+
+*Click the image for the 64 s demo (1080p). Every person in it is AI-generated.*
+
 Joint character swap on MiniMax H3 + the BFS Character Swap LoRA, with optional lip repair.
 Swap up to three people in a clip in one pass. The motion, the set and the clip's own audio stay.
 
@@ -36,6 +41,7 @@ Swap up to three people in a clip in one pass. The motion, the set and the clip'
 - Speed on an RTX 5090 32 GB: the example (1.5 MP, 6 s, 3 people) takes ~18 min; 2 MP is ~17 min per 4 s. Give it 64 GB+ system RAM.
 
 ## Files
+- `assets/`: the demo video and its poster frame.
 - `H3_Recast.json`: the workflow (opens in App mode; switch to Graph for the nodes).
 - `example_inputs/`: the Distracted Boyfriend example (guide clip, retirees scene reference, person 3 face for lip repair). Copy into `ComfyUI/input/`.
 

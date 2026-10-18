@@ -2,7 +2,7 @@
 
 [![H3 Recast demo: one clip, seven casts](assets/poster.jpg)](assets/h3_recast_demo.mp4)
 
-*Click the image for the 18 s demo (1080p). Every person in it is AI-generated.*
+*Click the image for the 33 s demo (1080p). Every person in it is AI-generated.*
 
 Joint character swap on MiniMax H3 + the BFS Character Swap LoRA, with optional lip repair.
 Swap up to three people in a clip in one pass. The motion, the set and the clip's own audio stay.

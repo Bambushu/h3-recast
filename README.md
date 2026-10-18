@@ -2,7 +2,7 @@
 
 [![H3 Recast demo: one clip, seven casts](assets/poster.jpg)](assets/h3_recast_demo.mp4)
 
-*Click the image for the 19 s demo (1080p). Every person in it is AI-generated.*
+*Click the image for the 18 s demo (1080p). Every person in it is AI-generated.*
 
 Joint character swap on MiniMax H3 + the BFS Character Swap LoRA, with optional lip repair.
 Swap up to three people in a clip in one pass. The motion, the set and the clip's own audio stay.
@@ -10,18 +10,19 @@ Swap up to three people in a clip in one pass. The motion, the set and the clip'
 **Try it first:** copy the files from `example_inputs/` into `ComfyUI/input/` and press Run. It is pre-set to the Distracted Boyfriend demo: all three people become retirees.
 
 **Hard rules**
-- **Number of people = everyone in the shot** (1-3), not only the ones you change. A person left out of the count gets re-dressed.
+- **Write a line for everyone in the shot** (1-3 people), not only the ones you change. A person left out gets re-dressed.
 - **Scene reference = one frame of this clip**, same framing, every face visible, with everyone edited into their new look.
 - **Big, obvious changes land** (age, gender, hair colour, build, painted faces). Subtle ones fall back to the clip.
 
 **Use it** (App mode, top to bottom)
 1. **Your clip**: one shot, no hard cuts, any fps (it is resampled to 24). **Duration**: a bit under its length (5.8 for a 6 s clip); the frame count rounds up to what H3 needs.
-2. **Scene reference**: edit one frame of the clip (Qwen-Image, GPT Image, Photoshop). To keep someone as they are, leave them unedited and describe them as they are.
-3. **Person 1-3**, left to right as they stand in the clip: their *new look* and *who they replace* ("the woman in the red dress"). These fill the author's trained caption.
+2. **Scene reference**: edit one frame of the clip (Qwen-Image, GPT Image, Photoshop). To keep someone as they are, leave them unedited and give them a line that describes them as they are.
+3. **Person 1-3**, left to right as they stand in the clip, one sentence each: `the woman in the red dress becomes an old woman with long silver hair`. The word *becomes* (or *turns into*, `->`, `=`) splits who they are now from their new look; the number of people is the last line you fill in. Fill the lines top down. These fill the author's trained caption.
 4. Run. Mouth too soft? Turn **Lip repair** on, pick the person (1-3) and Run again: the swap comes from the cache and only the face pass runs (~2 min on a 5090). Lip repair strength changes re-run only the face pass too.
 
 **If it looks wrong**
-- Someone you didn't change was re-dressed: count them in Number of people and describe them as they are.
+- Someone you didn't change was re-dressed: give them a line too, describing them as they are.
+- A person didn't change at all: check their line has the word *becomes*.
 - A change didn't land: make it bigger in the scene reference. Don't give red hair to the person in the red dress (the colours mix up); swap the colours instead.
 - Outfits or details drift: try a new Seed.
 

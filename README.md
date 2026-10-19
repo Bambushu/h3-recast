@@ -1,10 +1,12 @@
 # H3 Recast
 
-[![H3 Recast demo: one clip, seven casts](assets/poster.jpg)](assets/h3_recast_demo.mp4)
-
-*Click the image for the 33 s demo (1080p). Every person in it is AI-generated.*
+![H3 Recast loaded in ComfyUI with the example inputs and its result](assets/workflow.png)
 
 Here's my joint character swap on MiniMax H3 + the BFS Character Swap LoRA, with optional lip repair. It swaps up to three people in a clip in one pass. The motion, the set and the clip's own audio stay.
+
+![One clip, seven casts](assets/demo.gif)
+
+*8 s from the demo. The full 33 s with sound is [assets/h3_recast_demo.mp4](assets/h3_recast_demo.mp4) (GitHub can't play it in the browser, hit download). Every person in it is AI-generated.*
 
 Quick test: copy the files from `example_inputs/` into `ComfyUI/input/` and press Run. It comes pre-set to the Distracted Boyfriend demo: all three people become retirees.
 
@@ -46,7 +48,7 @@ What comes from where: motion, hands, lips, accessories (sunglasses, rings, watc
 
 ## Files
 
-- `assets/`: the demo video and its poster frame.
+- `assets/`: the workflow screenshot, the demo GIF and the full demo video.
 - `H3_Recast.json`: the workflow. Opens in App mode, switch to Graph for the nodes.
 - `example_inputs/`: the Distracted Boyfriend example (guide clip, retirees scene reference, person 2 and 3 faces for lip repair). Copy into `ComfyUI/input/`.
 
